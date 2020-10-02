@@ -10,7 +10,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<main.class>me.cameron.t2p.Main</main.class>
+		<main.class>me.cameron.tp2.Main</main.class>
 	</properties>
 	<build>
 		<plugins>
