@@ -46,15 +46,17 @@ public class Screen extends JPanel implements ActionListener {
 	}
 
 	public void load() {
-		try {
-			for (int i = 0; i != 10; i++) {
-				balls.add(new Ball(random.nextInt(getWidth()), random.nextInt(getHeight())));
-			}
-		} catch (IllegalArgumentException ex) {
-			for (int i = 0; i != 1; i++) {
-				balls.add(new Ball(random.nextInt(500), random.nextInt(500)));
-			}
-		}
+		balls.add(new Ball((getWidth())/2, (getHeight()/2)));
+		
+//		try {
+//			for (int i = 0; i != 20; i++) {
+//				balls.add(new Ball(random.nextInt(getWidth()), random.nextInt(getHeight())));
+//			}
+//		} catch (IllegalArgumentException ex) {
+//			for (int i = 0; i != 1; i++) {
+//				balls.add(new Ball(random.nextInt(500), random.nextInt(500)));
+//			}
+//		}
 	}
 
 	public void unload() {
@@ -82,7 +84,7 @@ public class Screen extends JPanel implements ActionListener {
 		cy = cy / balls.size();
 		
 		for(Ball ball : balls) {
-			ball.update();
+			ball.update(g);
 			ball.draw(g);
 		}
 		
